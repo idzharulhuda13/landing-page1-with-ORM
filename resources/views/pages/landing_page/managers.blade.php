@@ -32,61 +32,39 @@
 
                         <tbody class="bg-white divide-y divide-gray-200">
 
-                            <tr>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="flex items-center">
-                                        <div class="flex-shrink-0 h-10 w-10">
-                                            <img class="h-10 w-10 rounded-full" src="https://resources.premierleague.com/premierleague/photos/players/250x250/man39237.png" alt="">
-                                        </div>
-                                        <div class="ml-4">
-                                            <div class="text-sm font-medium text-gray-900">
-                                                Thomas Tuchel
-                                            </div>
-                                            <div class="text-sm text-gray-500">
-                                                47 Years
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    Chelsea FC
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    Germany
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <a href="#" class="text-indigo-600 hover:text-indigo-900">Detail</a>
-                                </td>
-                            </tr>
+                            @forelse ($managers as $managers)
 
-                            <tr>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="flex items-center">
-                                        <div class="flex-shrink-0 h-10 w-10">
-                                            <img class="h-10 w-10 rounded-full" src="https://resources.premierleague.com/premierleague/photos/players/250x250/man279.png" alt="">
-                                        </div>
-                                        <div class="ml-4">
-                                            <div class="text-sm font-medium text-gray-900">
-                                                Jurgen Klopp
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <div class="flex-shrink-0 h-10 w-10">
+                                                <img class="h-10 w-10 rounded-full" src="{{$managers->photo}}" alt="">
                                             </div>
-                                            <div class="text-sm text-gray-500">
-                                                53 Years
+                                            <div class="ml-4">
+                                                <div class="text-sm font-medium text-gray-900">
+                                                    {{$managers->name}}
+                                                </div>
+                                                <div class="text-sm text-gray-500">
+                                                    {{$managers->old . ' years'}}
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    Liverpool
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    Germany
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                    <a href="#" class="text-indigo-600 hover:text-indigo-900">Detail</a>
-                                </td>
-                            </tr>
-            
-                        <!-- More items... -->
+                                    </td>   
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        {{$managers->clubs->name}}
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        {{$managers->nationality}}
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Detail</a>
+                                    </td>
+                                </tr>
+                                
+                            @empty
+                                
+                            @endforelse
+        
                         </tbody>
                     </table>
                 </div>
