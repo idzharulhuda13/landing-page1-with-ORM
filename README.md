@@ -3,5 +3,5 @@
  
 #update:
 ## How to run this web?
-download zip clone git
+download zip or clone git
 
