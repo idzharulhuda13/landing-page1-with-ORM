@@ -1,5 +1,5 @@
 # landing-page1 with simple ORM
- Landing page using Laravel8 and there is some relation in database table, this relation was using laravel feature that is eloquent
+ Landing page using Laravel8 and there is some relation in database table, this relation was made by using laravel feature that is eloquent
  
 # update:
 ## How to run this web?
