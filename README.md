@@ -6,7 +6,7 @@
 download zip or clone git
 
 ## migrate database
-php artisan migrate:refresh --seed (don't forget to setting your .env)
+start your database service then run $ php artisan migrate:refresh --seed (don't forget to setting your .env)
 
 ## run web
 php artisan serve
